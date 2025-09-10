@@ -4,12 +4,13 @@
   "main": "server.js",
   "type": "commonjs",
   "prisma": {
-  "schema": "prisma/schema.prisma"
-},
+    "schema": "prisma/schema.prisma"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "prisma": "prisma"
+    "prisma": "prisma",
+    "postinstall": "npx prisma generate && npx prisma migrate deploy" 
   },
   "dependencies": {
     "@prisma/client": "^5.0.0",
